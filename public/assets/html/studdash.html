@@ -193,13 +193,15 @@
     </div>
     <div class="section section-basic">
       <div class="container">
-      <form method="POST">
-        <input type="text" name="no.of pages" placeholder ="no.of pages">
-        <select>
-          <option>oil</option>
-          <option>black and white</option>
-          <option>color</option>
-        </select>  
+      <form method="GET">
+        <input type="number" name="no.of pages" placeholder ="no.of pages" required><br>
+        <select name="typeofpaper" value="typeofpaper" required>
+          <option value="oil">oil</option>
+          <option value="b&w">black and white</option>
+          <option value="color">color</option>
+        </select><br>
+        <input type="submit" value="upload"><br>
+        <input type="reset" value="reset">  
       </form>
       </div>
    </div>
