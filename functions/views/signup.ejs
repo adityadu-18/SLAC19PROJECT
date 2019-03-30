@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<title>
+		Pay4Print
+	</title>
+	<!--     Fonts and icons     -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<!-- Nucleo Icons -->
+	<link href="/css/nucleo-icons.css" rel="stylesheet" />
+	<!-- CSS Files -->
+	<link href="/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="/demo/demo.css" rel="stylesheet" />
+	<script src="/__/firebase/5.8.4/firebase-app.js"></script>
+	<script src="/__/firebase/5.8.4/firebase-auth.js"></script>
+	<script src="/__/firebase/5.8.4/firebase-firestore.js"></script>
+	<script src="/__/firebase/init.js"></script>
+	<script type="text/javascript">
+		function signOut() {
+			firebase.auth().signOut();
+			document.cookie = '__session=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+			window.location = '/logout';
+		}
+	</script>
+</head>
+
+<body class="index-page">
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
+		<div class="container">
+			<div class="navbar-translate">
+				<a class="navbar-brand" href="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom"
+				 target="_blank">
+					<span>Pay4Print</span>
+				</a>
+				<button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+				 aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-bar bar1"></span>
+					<span class="navbar-toggler-bar bar2"></span>
+					<span class="navbar-toggler-bar bar3"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse justify-content-end" id="navigation">
+				<div class="navbar-collapse-header">
+					<div class="row">
+						<div class="col-6 collapse-brand">
+							<a>
+							</a>
+						</div>
+						<div class="col-6 collapse-close text-right">
+							<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index"
+							 aria-expanded="false" aria-label="Toggle navigation">
+								<i class="tim-icons icon-simple-remove"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item p-0">
+						<a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim"
+						 target="_blank">
+							<i class="fab fa-twitter"></i>
+							<p class="d-lg-none d-xl-none">Twitter</p>
+						</a>
+					</li>
+					<li class="nav-item p-0">
+						<a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim"
+						 target="_blank">
+							<i class="fab fa-facebook-square"></i>
+							<p class="d-lg-none d-xl-none">Facebook</p>
+						</a>
+					</li>
+					<li class="nav-item p-0">
+						<a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial"
+						 target="_blank">
+							<i class="fab fa-instagram"></i>
+							<p class="d-lg-none d-xl-none">Instagram</p>
+						</a>
+					</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- End Navbar -->
+	<div class="section section-signup">
+		<div class="container">
+			<div class="squares square-1"></div>
+			<div class="squares square-2"></div>
+			<div class="squares square-3"></div>
+			<div class="squares square-4"></div>
+			<div class="row row-grid justify-content-between align-items-center">
+				<div class="col-lg-6">
+					<h3 class="display-3 text-white">Already a User?
+					</h3>
+					<div class="btn-wrapper">
+						<a href="/signin" class="btn btn-info">Login</a>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-lg-auto">
+					<div class="card card-register">
+						<div class="card-header">
+							<img class="card-img" src="/img/square1.png" alt="Card image">
+							<h4 class="card-title">Register</h4>
+						</div>
+						<div class="card-body">
+							<form class="form">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="tim-icons icon-single-02"></i>
+										</div>
+									</div>
+									<input name="displayName" id="displayName" type="text" class="form-control" placeholder="Full Name">
+								</div>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="tim-icons icon-atom"></i>
+										</div>
+									</div>
+									<input id="registerNumber" name="registerNumber" type="text" class="form-control" placeholder="Register Number">
+								</div>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="tim-icons icon-mobile"></i>
+										</div>
+									</div>
+									<input id="phoneNumber" name="phoneNumber" type="text" class="form-control" placeholder="Phone Number">
+								</div>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="tim-icons icon-email-85"></i>
+										</div>
+									</div>
+									<input id="email" name="email" type="email" placeholder="Email" class="form-control">
+								</div>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="tim-icons icon-lock-circle"></i>
+										</div>
+									</div>
+									<input type="password" pattern=".{6,}" title="Six or more characters" class="form-control" placeholder="Password">
+								</div>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="tim-icons icon-lock-circle"></i>
+										</div>
+									</div>
+									<input type="text" class="form-control" placeholder="Confirm Password">
+								</div>
+								<div class="form-check text-left">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox">
+										<span class="form-check-sign"></span>
+										I agree to the
+										<a target="_blank" href="/TOS">terms and conditions</a>.
+									</label>
+								</div>
+							</form>
+						</div>
+						<div class="card-footer">
+							<a href="javascript:void(0)" class="btn btn-info btn-round btn-lg">Get Started</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Navbar Transparent -->
+	<nav class="navbar navbar-expand-lg navbar-transparent">
+		<div class="container">
+			<div class="navbar-translate">
+				<a class="navbar-brand" href="#pablo"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar-transparent"
+				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-bar bar1"></span>
+					<span class="navbar-toggler-bar bar2"></span>
+					<span class="navbar-toggler-bar bar3"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="example-navbar-transparent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#pablo">
+							<i class="fab fa-facebook-square"></i> Facebook
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#pablo">
+							<i class="fab fa-twitter"></i> Twitter
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#pablo">
+							<i class="fab fa-instagram"></i> Instagram
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- End Navbar Transparent-->
+	</div>
+	</div>
+	</div>
+	<!-- End .section-navbars  -->
+	<script>
+		firebase.auth().onAuthStateChanged(function (user) {
+			if (user) {
+				document.getElementById('email').value = user.email;
+				// document.getElementById('uid').value = user.uid;
+			} else {
+				window.location = '/login';
+			}
+		});
+	</script>
+</body>

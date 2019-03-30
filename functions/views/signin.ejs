@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="./assets/img/favicon.png">
+	<title>
+		Blk• Design System by Creative Tim
+	</title>
+	<!--     Fonts and icons     -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<!-- Nucleo Icons -->
+	<link href="../css/nucleo-icons.css" rel="stylesheet" />
+	<!-- CSS Files -->
+	<link href="../css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="../demo/demo.css" rel="stylesheet" />
+
+
+
+	<script src="/__/firebase/5.8.4/firebase-app.js"></script>
+	<script src="/__/firebase/5.8.4/firebase-auth.js"></script>
+	<script src="/__/firebase/5.8.4/firebase-firestore.js"></script>
+	<script src="/js/config.js"></script>
+	<script src="/js/common.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
+		<div class="container">
+			<div class="navbar-translate">
+				<a class="navbar-brand" href="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom"
+				 target="_blank">
+					<span>Pay4Print</span>
+				</a>
+				<button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+				 aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-bar bar1"></span>
+					<span class="navbar-toggler-bar bar2"></span>
+					<span class="navbar-toggler-bar bar3"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse justify-content-end" id="navigation">
+				<div class="navbar-collapse-header">
+					<div class="row">
+						<div class="col-6 collapse-brand">
+							<a>
+							</a>
+						</div>
+						<div class="col-6 collapse-close text-right">
+							<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index"
+							 aria-expanded="false" aria-label="Toggle navigation">
+								<i class="tim-icons icon-simple-remove"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item p-0">
+						<a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim"
+						 target="_blank">
+							<i class="fab fa-twitter"></i>
+							<p class="d-lg-none d-xl-none">Twitter</p>
+						</a>
+					</li>
+					<li class="nav-item p-0">
+						<a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim"
+						 target="_blank">
+							<i class="fab fa-facebook-square"></i>
+							<p class="d-lg-none d-xl-none">Facebook</p>
+						</a>
+					</li>
+					<li class="nav-item p-0">
+						<a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial"
+						 target="_blank">
+							<i class="fab fa-instagram"></i>
+							<p class="d-lg-none d-xl-none">Instagram</p>
+						</a>
+					</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- End Navbar -->
+	<div class="section section-signup">
+		<div class="container">
+
+			<div class="row row-grid justify-content-between align-items-center">
+				<div class="col-lg-6">
+					<h3 class="display-3 text-white">Print what you want<br>
+						<span class="text-white"> Pay 4 what you print</span>
+					</h3>
+					<div class="btn-wrapper">
+						<a href="#" class="btn btn-info">Need help in signing in ?</a>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-lg-auto">
+					<div class="card card-register">
+						<div class="card-header">
+							<img class="card-img" src="/img/square1.png" alt="Card image">
+							<h4 class="card-title"><span style="color:rgb(255, 255, 255)"> Sign In </span></h4>
+						</div>
+						<div id="container" class="card-body">
+
+							<div class="text-block-right">
+								<div id="loading">Loading...</div>
+								<div id="loaded" class="hidden">
+									<div id="main">
+										<div id="user-signed-in" class="hidden">
+											<div id="user-info">
+												<div id="photo-container">
+													<img id="photo" />
+												</div>
+												<div id="name"></div>
+												<div id="email"></div>
+												<div id="phone"></div>
+												<div id="is-new-user"></div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+										<div id="user-signed-out" class="hidden">
+											<h3>You are not logged in.</h3>
+											<input type="text" placeholder="E-Mail Id" required><br>
+											<input type="password" placeholder="Enter Password" required>
+											<a href="/studdash" class="btn btn-info btn-round btn-lg">Login</a>
+
+											<div id="firebaseui-spa">
+												<h3>(OR)</h3>
+												<h5>Pick a method to login / signup:</h5>
+												<div id="firebaseui-container"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- Navbar Transparent -->
+						<nav class="navbar navbar-expand-lg navbar-transparent">
+							<div class="container">
+								<div class="navbar-translate">
+									<a class="navbar-brand" href="#pablo"></a>
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar-transparent"
+									 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="navbar-toggler-bar bar1"></span>
+										<span class="navbar-toggler-bar bar2"></span>
+										<span class="navbar-toggler-bar bar3"></span>
+									</button>
+								</div>
+
+							</div>
+						</nav>
+						<!-- End Navbar Transparent-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End .section-navbars  -->
+		<script>
+			firebase.auth().onAuthStateChanged(function (user) {
+				if (user) {
+					var date = new Date();
+					date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+					expires = '; expires=' + date.toUTCString();
+					document.cookie =
+						'__session =' + (user.uid || '') + expires + '; path=/;';
+					firebase
+						.firestore()
+						.collection('users')
+						.doc(user.uid)
+						.get()
+						.then(doc => {
+							if (doc.exists) {
+								window.location = '/Dashboard';
+							} else window.location = '/signUp';
+						})
+						.catch(err => {
+							window.location = '/Login';
+						});
+				}
+			});
+		</script>
+		<script src="js/login.js"></script>
+
+</body>
+
+<!-- <div class="input-group">
+													<div class="input-group-prepend">
+														<div class="input-group-text">
+															<i class="tim-icons icon-lock-circle"></i>
+														</div>
+													</div>
+													<input name="Password" type="password" class="form-control" placeholder="Password">
+												</div>
+											-->

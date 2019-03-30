@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
   <title>
     Pay4Print•
   </title>
@@ -13,11 +13,11 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- Nucleo Icons -->
-  <link href="../css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="../css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
+  <link href="/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../demo/demo.css" rel="stylesheet" />
+  <link href="/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="profile-page">
@@ -53,12 +53,13 @@
         
           <li class="nav-item">
               <div class="col-md-4">
-                 <a href="file:///E:/Work/slac19project/SLAC19PROJECT/public/index.html">
+                 <a href="/">
                    <button class="btn btn-success" data-toggle="modal" data-target="#myModal2">
                     Logout
                   </button>
                  </a> 
-                </div>          </li>
+                </div>         
+         </li>
         </ul>
       </div>
     </div>
@@ -66,47 +67,39 @@
   <!-- End Navbar -->
   <div class="wrapper">
     <div class="page-header">
-      <img src="../img/dots.png" class="dots">
-      <img src="../img/path4.png" class="path">
+      <img src="/img/dots.png" class="dots">
+      <img src="/img/path4.png" class="path">
       <div class="container align-items-center">
         <div class="row">
-          <div class="col-lg-12 col-md-6">
-            <h1>Print Requests</h1>
+          <div class="col-lg-6 col-md-6">
+            <h1>Price</h1>
             <h5 class="text-on-back"></h5>
             <p class="profile-description">
               <table  class="table tablesorter " id="plain-table">
                 <tr>
-                  <th class="header" style="font-size: 130%">name of student</th>
-                  <th class="header" style="font-size: 130%">type of print</th>
-                  <th class="header" style="font-size: 130%">no of pages</th>
-                  <th class="header" style="font-size: 130%">price</th>
+                  <th class="header">Type of print</th>
+                  <th class="header">Cost per paper</th>
                 </tr>
-                <tr style="font-size: 120%">
-                  <td>abc</td>
-                  <td>oil</td>
-                  <td>1</td>
-                  <td>25</td>
-                </tr>
-                <tr style="font-size: 120%">
-                  <td>cde</td>
-                  <td>color</td>
-                  <td>3</td>
-                  <td>60</td>
-                </tr>
-                <tr style="font-size: 120%">
-                  <td>xyz</td>
-                  <td>b&w</td>
-                  <td>4</td>
+                <tr>
+                  <td>Oil Print</td>
                   <td>20</td>
+                </tr>
+                <tr>
+                  <td>Color Print</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Black & White</td>
+                  <td>5</td>
                 </tr>
               </table>
             </p>
             
           </div>
-         <!--  <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+          <div class="col-lg-4 col-md-6 ml-auto mr-auto">
             <div class="card card-coin card-plain">
               <div class="card-header">
-                <img src="../img/mike.jpg" class="img-center img-fluid rounded-circle">
+                <img src="/img/logo.png" class="img-center img-fluid rounded-circle">
                 <h4 class="title">Transactions</h4>
               </div>
               <div class="card-body">
@@ -116,11 +109,7 @@
                       RECENT DOCUMENTS
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#linkb">
-                      PAY TO
-                    </a>
-                  </li>
+                 
                 </ul>
                 <div class="tab-content tab-subcategories">
                   <div class="tab-pane active" id="linka">
@@ -145,10 +134,10 @@
                               OIL
                             </td>
                             <td>
-                              7.342
+                              7
                             </td>
                             <td>
-                              48,870.75 USD
+                              140
                             </td>
                           </tr>
                           <tr>
@@ -156,10 +145,10 @@
                               COLOR
                             </td>
                             <td>
-                              30.737
+                              30
                             </td>
                             <td>
-                              64,53.30 USD
+                              300
                             </td>
                           </tr>
                           <tr>
@@ -167,10 +156,10 @@
                               B&W
                             </td>
                             <td>
-                              19.242
+                              19
                             </td>
                             <td>
-                              18,354.96 USD
+                              95
                             </td>
                           </tr>
                         </tbody>
@@ -203,42 +192,45 @@
           </div>
         </div>
       </div>
-    </div> -->
-    <!-- <div class="section section-basic">
+    </div>
+    <div class="section section-basic">
       <div class="container">
-        <h2>Upload new document</h2>
-      <form method="POST">
-        <input type="number" name="no.of pages" placeholder ="no.of pages" ><br>
+      <div class="container title">
+        <h1>Upload new document</h1>
+        </div>
+      <form method="POST" style="margin-left: 15%;">
+        <input type="number" name="nopage" placeholder ="Number of Pages" ><br> <br>
+        <h5>Type of Print:</h5>
         <select name="typeofpaper" value="typeofpaper">
-          <option value="oil">oil</option>
-          <option value="b&w">black and white</option>
-          <option value="color">color</option>
-        </select><br>
-        <input type="submit" value="upload"><br>
-        <input type="reset" value="reset">  
-      </form>
+          <option value="oil">Oil</option>
+          <option value="b&w">Black and White</option>
+          <option value="color">Color</option>
+        </select><br><br>
+
+        <input class="btn btn-simple btn-primary btn-round" type="file" value="upload">
+        <div class='pm-button'><a href='https://www.payumoney.com/paybypayumoney/#/36364A3DFF81E03184F6F90ED55734C4'><img src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png' /></a></div>       </form>
       </div>
-   </div> -->
+   </div>
           <div class="col-md-5">
            
   <!--   Core JS Files   --> 
-  <script src="../js/core/jquery.min.js" type="text/javascript"></script>
-  <script src="../js/core/popper.min.js" type="text/javascript"></script>
-  <script src="../js/core/bootstrap.min.js" type="text/javascript"></script>
-  <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-  <script src="../js/plugins/bootstrap-switch.js"></script>
+  <script src="/js/plugins/bootstrap-switch.js"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script src="../js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="/js/plugins/nouislider.min.js" type="text/javascript"></script>
   <!-- Chart JS -->
-  <script src="../js/plugins/chartjs.min.js"></script>
+  <script src="/js/plugins/chartjs.min.js"></script>
   <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-  <script src="../js/plugins/moment.min.js"></script>
-  <script src="../js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <script src="/js/plugins/moment.min.js"></script>
+  <script src="/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
   <!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../demo/demo.js"></script>
+  <script src="/demo/demo.js"></script>
   <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
-  <script src="../js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
+  <script src="/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
 </body>
 
 </html>
