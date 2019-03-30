@@ -108,11 +108,7 @@
                       RECENT DOCUMENTS
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#linkb">
-                      PAY TO
-                    </a>
-                  </li>
+                 
                 </ul>
                 <div class="tab-content tab-subcategories">
                   <div class="tab-pane active" id="linka">
@@ -137,10 +133,10 @@
                               OIL
                             </td>
                             <td>
-                              7.342
+                              7
                             </td>
                             <td>
-                              48,870.75 USD
+                              140
                             </td>
                           </tr>
                           <tr>
@@ -148,10 +144,10 @@
                               COLOR
                             </td>
                             <td>
-                              30.737
+                              30
                             </td>
                             <td>
-                              64,53.30 USD
+                              300
                             </td>
                           </tr>
                           <tr>
@@ -159,10 +155,10 @@
                               B&W
                             </td>
                             <td>
-                              19.242
+                              19
                             </td>
                             <td>
-                              18,354.96 USD
+                              95
                             </td>
                           </tr>
                         </tbody>
@@ -198,16 +194,20 @@
     </div>
     <div class="section section-basic">
       <div class="container">
-        <h2>Upload new document</h2>
-      <form method="POST">
-        <input type="number" name="no.of pages" placeholder ="no.of pages" ><br>
+      <div class="container title">
+        <h1>Upload new document</h1>
+        </div>
+      <form method="POST" style="margin-left: 15%;">
+        <input type="number" name="nopage" placeholder ="Number of Pages" ><br> <br>
+        <h5>Type of Print:</h5>
         <select name="typeofpaper" value="typeofpaper">
-          <option value="oil">oil</option>
-          <option value="b&w">black and white</option>
-          <option value="color">color</option>
-        </select><br>
-        <input type="submit" value="upload"><br>
-        <input type="reset" value="reset">  
+          <option value="oil">Oil</option>
+          <option value="b&w">Black and White</option>
+          <option value="color">Color</option>
+        </select><br><br>
+
+        <input class="btn btn-simple btn-primary btn-round" type="file" value="upload">
+        <input class="btn btn-success" type="reset" value="Pay" style="margin-left: 5%;">  
       </form>
       </div>
    </div>
