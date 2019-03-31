@@ -88,7 +88,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     <div><input type="submit" value="Pay" onclick="launchBOLT(); return false;" /></div>
 	</form>
 </div>
-<script type="text/javascript"><!--
+<script type="text/javascript">
 $('#payment_form').bind('keyup blur', function(){
 	$.ajax({
           url: 'http://localhost:3000',
@@ -111,9 +111,9 @@ $('#payment_form').bind('keyup blur', function(){
           }
         }); 
 });
-//-->
+
 </script>
-<script type="text/javascript"><!--
+<script type="text/javascript">
 function launchBOLT()
 {
 	bolt.launch({
@@ -156,7 +156,7 @@ function launchBOLT()
 	}
 });
 }
-//--
+
 </script>	
 
 </body>
