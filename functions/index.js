@@ -36,6 +36,10 @@ app.get('/Login', (req, res) => {
 	res.render('signin');
 });
 
+app.get('/checkout', (req, res) => {
+	res.render('checkout');
+});
+
 app.get('/Privacy', (req, res) => {
 	res.send('TBA');
 });
