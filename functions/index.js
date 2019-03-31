@@ -69,17 +69,19 @@ app.post('/onSignUp', (req, res) => {
 	var displayName = req.body.displayName;
 	var email = req.body.email;
 	var password = req.body.password;
+	var registerNumber = req.body.registerNumber;
 	var phoneNumber = '+91' + req.body.phoneNumber;
 	var role = req.body.userRole;
 	// function verificationUpload() {
 	// 	admin.storage().ref(req.cookies.__session + '/verificationUpload/' + file.name).put(file);
 	// 	res.redirect('/Dashboard');
 	// }
-	function roleAdd() {
+	function dataAdd() {
 		db.collection('users')
 			.doc(req.cookies.__session)
 			.set({
-				role: role
+				role: role,
+				registerNumber: registerNumber
 			})
 			.then(res.redirect('/Dashboard'))
 			.catch(err => {
@@ -96,7 +98,7 @@ app.post('/onSignUp', (req, res) => {
 			// photoURL: photoURL
 		})
 		.then(userRecord => {
-			roleAdd();
+			dataAdd();
 			return;
 		})
 		.catch(error => {
